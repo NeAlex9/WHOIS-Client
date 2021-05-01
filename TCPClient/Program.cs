@@ -35,11 +35,11 @@ namespace TCPClient
             try
             {
                 TcpClient client = new TcpClient();
-                client.Connect("127.0.0.1", 43);
+                client.Connect("127.0.0.1", 43);    //whois.iana.org
                 NetworkStream stream = client.GetStream();
-                string message = "I want to get domen";
+                string message = "googe.com";  
                 SendData(stream, message);
-                Console.WriteLine(" *Client: " + message);
+                Console.WriteLine("Client: " + message + "\n");
                 string serverSend = GetData(stream);
                 Console.WriteLine("Server: " + serverSend);
                 stream.Close();
